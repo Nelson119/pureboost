@@ -1,2 +1,18 @@
 header {
+	background: url(../img/header-bg.png) 0 0/ 100% 71px;
+	height: 71px;
+	width: 100%;
+	position: relative;
+	h1{
+		@include Item(68, 45, 12, 0, 0, 10, 1336);
+		img{
+			@include SubImgW();
+		}
+	}
+	.facebook{
+		@include Item(25, 25, 40, 12, 0, 'auto', 1336);
+		img{
+			@include SubImgW();
+		}
+	}
 }

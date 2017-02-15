@@ -1,0 +1,110 @@
+.kv{
+	@include Item(1336, 614, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	background-size: 100% auto;
+	.kv-text{
+		@include Item(672, 178, 170, 0, 0 , 70, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		text-indent: -9999em;
+	}
+}
+.section-1{
+	@include Item(1336, 670, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	background-size: 100% auto;
+	.title{
+		@include Item(538, 30, 190, 0, 0 , 71, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		text-indent: -9999em;
+	}
+	.shadow{
+		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+	}
+	.text{
+		@include Item(373, 96, 250, 0, 0 , 71, 1336, 'fit', 'absolute');
+		white-space: nowrap;
+		font-weight: 100;
+		letter-spacing: 0.2em;
+		span{
+			@include SubItem();
+		}
+	}
+}
+.section-2{
+	@include Item(1336, 669, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	background-size: 100% auto;
+	.shadow{
+		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+	}
+	.title{
+		@include Item(420, 30, 151, 76, 0 , 'auto', 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		white-space: nowrap;
+		font-weight: 100;
+		letter-spacing: 0.25em;
+		span{
+			@include SubItem();
+		}
+	}
+	.text{
+		@include Item(400, 108, 216, 77, 0 , 'auto', 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		white-space: nowrap;
+		font-weight: 100;
+		letter-spacing: 0.2em;
+		span{
+			@include SubItem();
+		}
+	}
+}
+.section-3{
+	@include Item(1336, 671, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	background-size: 100% auto;
+	.shadow{
+		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+	}
+	.title{
+		@include Item(312, 29, 379, 0, 0 , 71, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		text-indent: -9999em;
+	}
+	.text{
+		@include Item(247, 95, 439, 0, 0 , 71, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		white-space: nowrap;
+		font-weight: 100;
+		letter-spacing: 0.2em;
+		span{
+			@include SubItem();
+		}
+	}
+}
+.section-4{
+	@include Item(1336, 685, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	background-size: 100% auto;
+	.shadow{
+		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+	}
+	.title{
+		@include Item(420, 30, 404, 76, 0 , 'auto', 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		white-space: nowrap;
+		font-weight: 100;
+		letter-spacing: 0.25em;
+		span{
+			@include SubItem();
+		}
+	}
+	.text{
+		@include Item(400, 108, 474, 77, 0 , 'auto', 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		white-space: nowrap;
+		font-weight: 100;
+		letter-spacing: 0.2em;
+		span{
+			@include SubItem();
+		}
+	}
+}
