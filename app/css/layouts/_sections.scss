@@ -35,7 +35,8 @@
 	}
 	.scroll{
 		@include Item(23, 56, 'auto', 0, 24 , 682, 1336, 'fit', 'absolute');
-		background-size: cover;		
+		background-size: cover;
+		opacity: 0;
 	}
 	&.on{
 		.kv{
@@ -58,6 +59,10 @@
 			);
 			@media screen and (max-width: #{$screen-xs - 1}) {
 			}
+		}
+		.scroll{
+			opacity: 1;
+			transition: 1s ease-out 1s;
 		}
 	}
 }
