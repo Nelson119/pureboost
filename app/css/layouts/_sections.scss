@@ -34,7 +34,7 @@
 		}
 	}
 	.scroll{
-		@include Item(23, 56, 'auto', 0, 24 , 682, 1336, 'fit', 'absolute');
+		@include Item(23, 56, 'auto', 0, 24 , 682, 1336, 'fit', 'fixed');
 		background-size: cover;
 		opacity: 0;
 	}
