@@ -5,7 +5,8 @@
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
     "detectizr": "^2.2.0",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "slick-carousel": "^1.6.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -20,6 +21,12 @@
         "less/font-awesome.less",
         "scss/font-awesome.scss",
         "fonts/*"
+      ]
+    },
+    "slick-carousel": {
+      "main": [
+        "slick/slick.js",
+        "slick/slick.scss"
       ]
     }
   },

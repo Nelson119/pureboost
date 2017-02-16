@@ -181,3 +181,13 @@ gulp.task('build', ['lint', 'html', 'img', 'fonts', 'extras'], () => {
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
 });
+
+
+
+var tingpng = require('gulp-tinypng');
+ 
+gulp.task('tinypng', function () {
+    gulp.src(['app/img/white/**/*.png','app/img/white/**/*.jpg'])
+        .pipe(tingpng('13I8NM09OlZ1E0vNNq4c3Nq9oFTT8Y-v'))
+        .pipe(gulp.dest('app/img/tinypng/white'));
+});

@@ -1,12 +1,15 @@
 #kv{
 	overflow:hidden;
 	@include Item(1336, 614, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	padding-top: 100vh;
 	.kv{
 		@include Item(1336, 614, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
-		background-size: 140% auto;
-		background-position: center;
+		background-size: cover;
+		transform: scale(1.4);
+		background-position: right center;
 		opacity: 0.1;
 		margin-top: 71px;
+		padding-top: 100vh;
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(640, 836, 83, 0, 0, 0, 640,'fit','absolute');
 		}
@@ -30,11 +33,16 @@
 			@include Item(362, 111, 122, 0, 0, 129, 640,'fit','absolute');
 		}
 	}
+	.scroll{
+		@include Item(23, 56, 'auto', 0, 24 , 682, 1336, 'fit', 'absolute');
+		background-size: cover;		
+	}
 	&.on{
 		.kv{
-			background-size: 100% auto;
+			// background-size: 100% auto;
 			opacity: 1;
 			transition: 1s ease-out 0s;
+			transform: none;
 		}
 		.kv-text-1{
 			@include animation(
@@ -46,7 +54,7 @@
 		.kv-text-2{
 			
 			@include animation(
-				fadeInUp 1s 1 linear forwards 0.15s
+				fadeInUp 0.5s 1 linear forwards 0.15s
 			);
 			@media screen and (max-width: #{$screen-xs - 1}) {
 			}
@@ -88,6 +96,7 @@
 		white-space: nowrap;
 		font-weight: 100;
 		letter-spacing: 0.2em;
+		line-height: 5;
 		span{
 			@include SubItem();
 		}
@@ -113,9 +122,10 @@
 			}
 		}
 		.text{
-			
+			line-height: 1.4;
+			transition: 1.2s ease-out 0s;
 			@include animation(
-				fadeInUp 1s 1 linear forwards 0.15s
+				fadeInUp 0.5s 1 linear forwards 0.15s
 			);
 			@media screen and (max-width: #{$screen-xs - 1}) {
 			}
@@ -161,6 +171,7 @@
 		letter-spacing: 0.2em;
 		opacity: 0.1;
 		z-index: 3;
+		line-height: 5;
 		span{
 			@include SubItem();
 		}
@@ -186,8 +197,10 @@
 		}
 		.text{
 			
+			line-height: 1.4;
+			transition: 1.2s ease-out 0s;
 			@include animation(
-				fadeInUp 1s 1 linear forwards 0.15s
+				fadeInUp 0.5s 1 linear forwards 0.15s
 			);
 			@media screen and (max-width: #{$screen-xs - 1}) {
 			}
@@ -225,6 +238,7 @@
 		font-weight: 100;
 		letter-spacing: 0.2em;
 		opacity: 0.1;
+		line-height: 5;
 		span{
 			@include SubItem();
 		}
@@ -249,9 +263,10 @@
 			}
 		}
 		.text{
-			
+			line-height: 1.4;
+			transition: 1.2s ease-out 0s;
 			@include animation(
-				fadeInUp 1s 1 linear forwards 0.15s
+				fadeInUp 0.5s 1 linear forwards 0.15s
 			);
 			@media screen and (max-width: #{$screen-xs - 1}) {
 			}
@@ -261,6 +276,7 @@
 
 #section4{
 	@include Item(1336, 684, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	overflow: hidden;
 	.section-4{
 		@include Item(1336, 684, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
@@ -297,6 +313,7 @@
 		letter-spacing: 0.2em;
 		opacity: 0.1;
 		z-index: 3;
+		line-height: 5;
 		span{
 			@include SubItem();
 		}
@@ -321,9 +338,10 @@
 			}
 		}
 		.text{
-			
+			line-height: 1.4;
+			transition: 1.2s ease-out 0s;
 			@include animation(
-				fadeInUp 1s 1 linear forwards 0.15s
+				fadeInUp 0.5s 1 linear forwards 0.15s
 			);
 			@media screen and (max-width: #{$screen-xs - 1}) {
 			}
@@ -331,11 +349,137 @@
 	}
 }
 
+#section5{
+	@include Item(1336, 750, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	.pureboost{
+		background-size: 100% auto;
+		background-position: center;
+		opacity: 0.1;
+		@include Item(310, 40, 30, 0, 0 , 92, 1336, 'fit', 'absolute');
+	}
+	.carousel{
+		opacity: 0.1;
+		@include SubItem();
+		.slick-list{
+			@include SubItem();
+		}
+		.slick-track{
+			height: 100%;
+		}
+		.slide{
+			@include SubItem();
+		}
+		.slide-image{
+			@include Item(822, 456, 94, 0, 0 , 186, 1336, 'fit', 'absolute');
+			figure{
+				background: center/cover;
+			}
+		}
+		.slide-thumb{
+			@include Item(70, 560, 67, 76, 0 , 'auto', 1336, 'fit', 'absolute');
+			.slick-track{
+				width: 100%;
+			}
+			aside{
+				@include SubItem();
+				a{
+					@include Item(70, 70, 'auto', 'auto', 'auto' , 'auto', 70, 'fit', 'relative');
+					figure{
+						background: center/cover;
+						transition-duration: 0.25s;
+						opacity: 0.75;
+						@include SubItem();
+					}
+					&.slick-current{
+						img{
+							opacity: 1;
+							transform: none;
+						}
+					}
+				}
+			}
+		}
+
+		button.slick-prev{
+			background: rgba(0,0,0,0) url(../img/prev.png) center/ cover;
+			border: 0;
+			text-indent: -999em;
+			@include Item(22, 132, 253, 0, 0 , 100, 1336, 'fit', 'absolute');
+			transform: scale(1.1) translateX(-300%);
+			opacity: 0.1;
+		}
+		button.slick-next{
+			background: rgba(0,0,0,0) url(../img/next.png) center/ cover;
+			border: 0;			
+			text-indent: -999em;
+			@include Item(22, 132, 253, 235, 0 , 'auto', 1336, 'fit', 'absolute');
+			transform: scale(1.1) translateX(300%);
+			opacity: 0.1;
+		}
+	}
+	.colors{
+		opacity: 0.1;
+		@include Item(371, 36, 605, 0, 0 , 423, 1336, 'fit', 'absolute');
+		.slick-list{
+			@include SubItem();
+		}
+		.slick-track{
+			height: 100%;
+		}
+		aside{
+			@include SubItem();
+		}
+		a{
+			@include Item(90, 13, 'auto', 'auto', 'auto' , 'auto', 371, 'fit', 'relative');
+			img{
+				transition-duration: 0.25s;
+				transform: scale(0.5);
+				opacity: 0.75;
+				@include SubImgW();
+			}
+			&.slick-current{
+				img{
+					opacity: 1;
+					transform: none;
+				}
+			}
+		}
+	}
+	&.on{
+		.pureboost{
+			@include animation(
+				fadeIn 0.9s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+		button.slick-prev, button.slick-next{
+			transition: 1.5s ease-out 0s;
+			transform: none;
+			opacity: 1;
+		}
+		.carousel{
+			@include animation(
+				fadeIn 0.9s 1 linear forwards 0s
+			);
+		}
+		.colors{
+			@include animation(
+				fadeIn 0.9s 1 linear forwards 0s
+			);
+		}
+	}
+}
+
+.slick-slide, .slick-arrow{
+	outline: none;
+}
+
 @include keyframes( fadeInUp )
 {
 	from {
 		opacity: 0.1;
-		transform: translate3d(0, 50%, 0);
+		transform: translate3d(0, 30%, 0);
 	}
 
 	to {
@@ -348,7 +492,7 @@
 {
 	from {
 		opacity: 0.1;
-		transform: translate3d(0, -50%, 0);
+		transform: translate3d(0, -30%, 0);
 	}
 
 	to {
