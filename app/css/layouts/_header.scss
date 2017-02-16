@@ -2,17 +2,31 @@ header {
 	background: url(../img/header-bg.png) 0 0/ 100% 71px;
 	height: 71px;
 	width: 100%;
-	position: relative;
+	top: 0;
+	z-index: 10;
+
+	position: fixed;
 	h1{
 		@include Item(68, 45, 12, 0, 0, 10, 1336);
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(75, 51, 14, 0, 0, 23, 640,'fit','absolute');
+		}
 		img{
 			@include SubImgW();
 		}
 	}
 	.facebook{
 		@include Item(25, 25, 40, 12, 0, 'auto', 1336);
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(52, 52, 15, 27, 0, 'auto', 640,'fit','absolute');
+		}
 		img{
 			@include SubImgW();
 		}
+	}
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 83, 0, 0, 0, 0, 640,'fit','fixed');
+		background: #000;
+		z-index: 10;
 	}
 }

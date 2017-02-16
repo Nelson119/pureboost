@@ -1,19 +1,32 @@
 .kv{
 	@include Item(1336, 614, 0, 0, 0 , 0, 1336, 'fit', 'relative');
 	background-size: 100% auto;
+	margin-top: 71px;
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 836, 83, 0, 0, 0, 640,'fit','relative');
+	}
 	.kv-text{
 		@include Item(672, 178, 170, 0, 0 , 70, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
 		text-indent: -9999em;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(362, 111, 122, 0, 0, 129, 640,'fit','absolute');
+		}
 	}
 }
 .section-1{
 	@include Item(1336, 670, 0, 0, 0 , 0, 1336, 'fit', 'relative');
 	background-size: 100% auto;
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 838, 0, 0, 0, 0, 640,'fit','relative');
+	}
 	.title{
 		@include Item(538, 30, 190, 0, 0 , 71, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
 		text-indent: -9999em;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(353, 205, 137, 0, 0, 107, 640,'fit','absolute');
+		}
 	}
 	.shadow{
 		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
@@ -32,6 +45,9 @@
 .section-2{
 	@include Item(1336, 669, 0, 0, 0 , 0, 1336, 'fit', 'relative');
 	background-size: 100% auto;
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 841, 0, 0, 0, 0, 640,'fit','relative');
+	}
 	.shadow{
 		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
@@ -60,6 +76,9 @@
 .section-3{
 	@include Item(1336, 671, 0, 0, 0 , 0, 1336, 'fit', 'relative');
 	background-size: 100% auto;
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 920, 0, 0, 0, 0, 640,'fit','relative');
+	}
 	.shadow{
 		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
@@ -83,6 +102,9 @@
 .section-4{
 	@include Item(1336, 685, 0, 0, 0 , 0, 1336, 'fit', 'relative');
 	background-size: 100% auto;
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 920, 0, 0, 0, 0, 640,'fit','relative');
+	}
 	.shadow{
 		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
