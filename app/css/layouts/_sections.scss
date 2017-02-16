@@ -1,26 +1,75 @@
-.kv{
+#kv{
+	overflow:hidden;
 	@include Item(1336, 614, 0, 0, 0 , 0, 1336, 'fit', 'relative');
-	background-size: 100% auto;
-	margin-top: 71px;
-	@media screen and (max-width: #{$screen-xs - 1}) {
-		@include Item(640, 836, 83, 0, 0, 0, 640,'fit','relative');
+	.kv{
+		@include Item(1336, 614, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		background-size: 140% auto;
+		background-position: center;
+		opacity: 0.1;
+		margin-top: 71px;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(640, 836, 83, 0, 0, 0, 640,'fit','absolute');
+		}
 	}
-	.kv-text{
-		@include Item(672, 178, 170, 0, 0 , 70, 1336, 'fit', 'absolute');
+	.kv-text-1{
+		@include Item(672, 86, 170, 0, 0 , 70, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
 		text-indent: -9999em;
+		opacity: 0.1;
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(362, 111, 122, 0, 0, 129, 640,'fit','absolute');
 		}
 	}
+	.kv-text-2{
+		@include Item(566, 58, 288, 0, 0 , 70, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		text-indent: -9999em;
+		opacity: 0.1;
+		// top: 20%;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(362, 111, 122, 0, 0, 129, 640,'fit','absolute');
+		}
+	}
+	&.on{
+		.kv{
+			background-size: 100% auto;
+			opacity: 1;
+			transition: 1s ease-out 0s;
+		}
+		.kv-text-1{
+			@include animation(
+				fadeIn 0.9s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+		.kv-text-2{
+			
+			@include animation(
+				fadeInUp 1s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+	}
 }
-.section-1{
+
+#section1{
 	@include Item(1336, 670, 0, 0, 0 , 0, 1336, 'fit', 'relative');
-	background-size: 100% auto;
-	@media screen and (max-width: #{$screen-xs - 1}) {
-		@include Item(640, 838, 0, 0, 0, 0, 640,'fit','relative');
+	.section-1{
+		@include Item(1336, 670, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		background-size: 110% auto;
+		background-position: center;
+		opacity: 0.1;
+		top: -5%;
+		transform: scale(1.05);
+		transform-origin: right center 1px; 
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(640, 838, 0, 0, 0, 0, 640,'fit','absolute');
+		}
 	}
 	.title{
+		opacity: 0.1;
 		@include Item(538, 30, 190, 0, 0 , 71, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
 		text-indent: -9999em;
@@ -29,10 +78,12 @@
 		}
 	}
 	.shadow{
+		opacity: 0.1;
 		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
 	}
 	.text{
+		opacity: 0.1;
 		@include Item(373, 96, 250, 0, 0 , 71, 1336, 'fit', 'absolute');
 		white-space: nowrap;
 		font-weight: 100;
@@ -41,16 +92,54 @@
 			@include SubItem();
 		}
 	}
+	&.on{
+		.section-1{
+			background-size: 100% auto;
+			top: 0;
+			opacity: 1;
+			transform: none; 
+			transition: 1s ease-out 0s;
+		}
+		.shadow{
+			@include animation(
+				fadeInDown 0.9s 1 linear forwards 0s
+			);
+		}
+		.title{
+			@include animation(
+				fadeIn 0.9s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+		.text{
+			
+			@include animation(
+				fadeInUp 1s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+	}
 }
-.section-2{
-	@include Item(1336, 669, 0, 0, 0 , 0, 1336, 'fit', 'relative');
-	background-size: 100% auto;
-	@media screen and (max-width: #{$screen-xs - 1}) {
-		@include Item(640, 841, 0, 0, 0, 0, 640,'fit','relative');
+
+#section2{
+	@include Item(1336, 668, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	.section-2{
+		@include Item(1336, 668, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		background-position: center;
+		opacity: 0.1;
+		top: 5%;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(640, 841, 0, 0, 0, 0, 640,'fit','absolute');
+		}
 	}
 	.shadow{
 		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
+		opacity: 0.1;
+		z-index: 3;
 	}
 	.title{
 		@include Item(420, 30, 151, 76, 0 , 'auto', 1336, 'fit', 'absolute');
@@ -58,6 +147,8 @@
 		white-space: nowrap;
 		font-weight: 100;
 		letter-spacing: 0.25em;
+		opacity: 0.1;
+		z-index: 3;
 		span{
 			@include SubItem();
 		}
@@ -68,25 +159,64 @@
 		white-space: nowrap;
 		font-weight: 100;
 		letter-spacing: 0.2em;
+		opacity: 0.1;
+		z-index: 3;
 		span{
 			@include SubItem();
 		}
 	}
+	&.on{
+		.section-2{
+			background-size: 100% auto;
+			top: 0;
+			opacity: 1;
+			transition: 1s ease-out 0s;
+		}
+		.shadow{
+			@include animation(
+				fadeInDown 0.9s 1 linear forwards 0s
+			);
+		}
+		.title{
+			@include animation(
+				fadeIn 0.9s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+		.text{
+			
+			@include animation(
+				fadeInUp 1s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+	}
 }
-.section-3{
+
+#section3{
 	@include Item(1336, 671, 0, 0, 0 , 0, 1336, 'fit', 'relative');
-	background-size: 100% auto;
-	@media screen and (max-width: #{$screen-xs - 1}) {
-		@include Item(640, 920, 0, 0, 0, 0, 640,'fit','relative');
+	.section-3{
+		@include Item(1336, 671, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		background-position: center;
+		opacity: 0.1;
+		top: -5%;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(640, 920, 0, 0, 0, 0, 640,'fit','absolute');
+		}
 	}
 	.shadow{
 		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
+		opacity: 0.1;
 	}
 	.title{
 		@include Item(312, 29, 379, 0, 0 , 71, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
 		text-indent: -9999em;
+		opacity: 0.1;
 	}
 	.text{
 		@include Item(247, 95, 439, 0, 0 , 71, 1336, 'fit', 'absolute');
@@ -94,20 +224,58 @@
 		white-space: nowrap;
 		font-weight: 100;
 		letter-spacing: 0.2em;
+		opacity: 0.1;
 		span{
 			@include SubItem();
 		}
 	}
+	&.on{
+		.section-3{
+			background-size: 100% auto;
+			top: 0;
+			opacity: 1;
+			transition: 1s ease-out 0s;
+		}
+		.shadow{
+			@include animation(
+				fadeInDown 0.9s 1 linear forwards 0s
+			);
+		}
+		.title{
+			@include animation(
+				fadeIn 0.9s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+		.text{
+			
+			@include animation(
+				fadeInUp 1s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+	}
 }
-.section-4{
-	@include Item(1336, 685, 0, 0, 0 , 0, 1336, 'fit', 'relative');
-	background-size: 100% auto;
-	@media screen and (max-width: #{$screen-xs - 1}) {
-		@include Item(640, 920, 0, 0, 0, 0, 640,'fit','relative');
+
+#section4{
+	@include Item(1336, 684, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	.section-4{
+		@include Item(1336, 684, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		background-size: 100% auto;
+		background-position: center;
+		opacity: 0.1;
+		top: 5%;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(640, 920, 0, 0, 0, 0, 640,'fit','absolute');
+		}
 	}
 	.shadow{
 		@include Item(1336, 241, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
+		opacity: 0.1;
+		z-index: 3;
 	}
 	.title{
 		@include Item(420, 30, 404, 76, 0 , 'auto', 1336, 'fit', 'absolute');
@@ -115,6 +283,8 @@
 		white-space: nowrap;
 		font-weight: 100;
 		letter-spacing: 0.25em;
+		opacity: 0.1;
+		z-index: 3;
 		span{
 			@include SubItem();
 		}
@@ -125,8 +295,75 @@
 		white-space: nowrap;
 		font-weight: 100;
 		letter-spacing: 0.2em;
+		opacity: 0.1;
+		z-index: 3;
 		span{
 			@include SubItem();
 		}
+	}
+	&.on{
+		.section-4{
+			background-size: 100% auto;
+			top: 0;
+			opacity: 1;
+			transition: 1s ease-out 0s;
+		}
+		.shadow{
+			@include animation(
+				fadeInDown 0.9s 1 linear forwards 0s
+			);
+		}
+		.title{
+			@include animation(
+				fadeIn 0.9s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+		.text{
+			
+			@include animation(
+				fadeInUp 1s 1 linear forwards 0.15s
+			);
+			@media screen and (max-width: #{$screen-xs - 1}) {
+			}
+		}
+	}
+}
+
+@include keyframes( fadeInUp )
+{
+	from {
+		opacity: 0.1;
+		transform: translate3d(0, 50%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@include keyframes( fadeInDown )
+{
+	from {
+		opacity: 0.1;
+		transform: translate3d(0, -50%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@include keyframes( fadeIn )
+{
+	from {
+		opacity: 0.1;
+	}
+
+	to {
+		opacity: 1;
 	}
 }

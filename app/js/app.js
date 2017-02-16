@@ -13,7 +13,11 @@ app.partial = {};
 // 網址為 gulp 或者 github 時 設定成debug 模式
 var debug = /localhost[:]9000|nelson119.github.io/.test(location.href);
 
+var scrollTop = 0;
 
+var activeSection = '';
+
+var range = {};
 
 $(function(){
     app.getParam = getParam;
@@ -22,16 +26,68 @@ $(function(){
 	$.each(app.partial, function(name, init){
 		init();
     });
+
+	$('.section').each(function(){
+
+		
+		var id = $(this).attr('id');
+
+		if(!id){
+			return;
+		}
+
+		range[id] = {};
+		// if(!$('#'+id).length){
+		// 	return;
+		// }
+		range[id].top = function(){
+			return $('#' + id).offset().top - $('#' + id).outerHeight() *0.4;
+		};
+		range[id].butt = function(){
+			return $('#' + id).offset().top + $('#' + id).outerHeight() *1.4;
+		};
+	});
+
     app.imageReload.init();
 
 
     app.imageReload.callback = function(){
 			// console.log('preload callback');
     	$('html').addClass('loading-done');
+    	setTimeout(function(){
+			$(window).trigger('scroll');
+    	}, 500);
     };
     app.imageReload.init();
 
 
+	$(window).on('scroll', function(){
+		var currentTop = $(window).scrollTop();
+		var currentButt = $(window).scrollTop() + $(window).height();
+		$('.section').each(function(i, section){
+			var sectionId = $(this).attr('id');
+			var rg = range[sectionId];		
+			// console.log(rg.top);
+			// console.log(rg.butt);	
+			if(scrollTop < currentTop){
+				if(rg.top() < currentButt && rg.butt() > currentButt){
+					if(activeSection != sectionId){
+						activeSection = sectionId;
+					}
+				} 
+			}else{
+				if(rg.top() < currentTop && rg.butt() > currentTop){
+					if(activeSection != sectionId){
+						activeSection = sectionId;
+					}
+				} 
+			}
+			scrollTop = currentTop;
+		});
+		if(activeSection && !$('#' + activeSection).hasClass('on')){
+			$('#' + activeSection).addClass('on').siblings().removeClass('on');
+		}
+	});
 });
 
 
