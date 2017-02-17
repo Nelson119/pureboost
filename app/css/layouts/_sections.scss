@@ -12,6 +12,7 @@
 		padding-top: 100vh;
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(640, 836, 83, 0, 0, 0, 640,'fit','absolute');
+			padding-top: 100vh;
 		}
 	}
 	.kv-text-1{
@@ -20,7 +21,7 @@
 		text-indent: -9999em;
 		opacity: 0.1;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(362, 111, 122, 0, 0, 129, 640,'fit','absolute');
+			@include Item(362, 46, 123, 0, 0, 129, 640,'fit','absolute');
 		}
 	}
 	.kv-text-2{
@@ -30,13 +31,16 @@
 		opacity: 0.1;
 		// top: 20%;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(362, 111, 122, 0, 0, 129, 640,'fit','absolute');
+			@include Item(362, 38, 195, 0, 0, 129, 640,'fit','absolute');
 		}
 	}
 	.scroll{
 		@include Item(23, 56, 'auto', 0, 24 , 682, 1336, 'fit', 'fixed');
 		background-size: cover;
 		opacity: 0;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(62, 34, 'auto', 0, 15 , 293, 640,'fit','absolute');
+		}
 	}
 	&.on{
 		.kv{
@@ -69,17 +73,20 @@
 
 #section1{
 	@include Item(1336, 670, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 838, 0, 0, 0, 0, 640,'fit','relative');
+	}
 	.section-1{
 		@include Item(1336, 670, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(640, 838, 0, 0, 0, 0, 640,'fit','absolute');
+		}
 		background-size: 110% auto;
 		background-position: center;
 		opacity: 0.1;
 		top: -5%;
 		transform: scale(1.05);
 		transform-origin: right center 1px; 
-		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(640, 838, 0, 0, 0, 0, 640,'fit','absolute');
-		}
 	}
 	.title{
 		opacity: 0.1;
@@ -140,6 +147,9 @@
 
 #section2{
 	@include Item(1336, 668, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 841, 0, 0, 0, 0, 640,'fit','relative');
+	}
 	.section-2{
 		@include Item(1336, 668, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
@@ -164,6 +174,9 @@
 		letter-spacing: 0.25em;
 		opacity: 0.1;
 		z-index: 3;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(339, 204, 60, 0, 0, 107, 640,'fit','absolute');
+		}
 		span{
 			@include SubItem();
 		}
@@ -215,6 +228,9 @@
 
 #section3{
 	@include Item(1336, 671, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 920, 0, 0, 0, 0, 640,'fit','relative');
+	}
 	.section-3{
 		@include Item(1336, 671, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
@@ -235,6 +251,9 @@
 		background-size: 100% auto;
 		text-indent: -9999em;
 		opacity: 0.1;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(245, 203, 136, 0, 0, 107, 640,'fit','absolute');
+		}
 	}
 	.text{
 		@include Item(247, 95, 439, 0, 0 , 71, 1336, 'fit', 'absolute');
@@ -282,6 +301,9 @@
 #section4{
 	@include Item(1336, 684, 0, 0, 0 , 0, 1336, 'fit', 'relative');
 	overflow: hidden;
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 920, 0, 0, 0, 0, 640,'fit','relative');
+	}
 	.section-4{
 		@include Item(1336, 684, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
@@ -306,6 +328,9 @@
 		letter-spacing: 0.25em;
 		opacity: 0.1;
 		z-index: 3;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(284, 204, 136, 0, 0, 107, 640,'fit','absolute');
+		}
 		span{
 			@include SubItem();
 		}
@@ -356,11 +381,17 @@
 
 #section5{
 	@include Item(1336, 750, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		@include Item(640, 700, 0, 0, 0, 0, 640,'fit','relative');
+	}
 	.pureboost{
 		background-size: 100% auto;
 		background-position: center;
 		opacity: 0.1;
 		@include Item(310, 40, 30, 0, 0 , 92, 1336, 'fit', 'absolute');
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(254, 33, 62, 0, 0, 191, 640,'fit','absolute');
+		}
 	}
 	.carousel{
 		opacity: 0.1;
@@ -376,19 +407,43 @@
 		}
 		.slide-image{
 			@include Item(822, 456, 94, 0, 0 , 186, 1336, 'fit', 'absolute');
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(640, 391, 152, 0, 0, 0, 640,'fit','absolute');
+			}
 			figure{
 				background: center/cover;
 			}
 		}
 		.slide-thumb{
 			@include Item(70, 560, 67, 76, 0 , 'auto', 1336, 'fit', 'absolute');
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(640, 60, 543, 0, 0, 0, 640,'fit','absolute');
+				.slick-list{
+					@include SubItem();
+				}
+			}
 			.slick-track{
 				width: 100%;
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					width: 100%!important;
+					text-align: center;
+					a{
+						display: inline-block;
+						position: relative;
+						float: none;
+						&+a{
+							margin-left: 0.2em;
+						}
+					}
+				}
 			}
 			aside{
 				@include SubItem();
 				a{
 					@include Item(70, 70, 'auto', 'auto', 'auto' , 'auto', 70, 'fit', 'relative');
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						@include Item(60, 60, 'auto', 'auto', 'auto' , 'auto', 640,'fit','relative');
+					}
 					figure{
 						background: center/cover;
 						transition-duration: 0.25s;
@@ -412,6 +467,10 @@
 			@include Item(22, 132, 253, 0, 0 , 100, 1336, 'fit', 'absolute');
 			transform: scale(1.1) translateX(-300%);
 			opacity: 0.1;
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				background-image: url(../img/prev@640.png);
+				@include Item(12, 39, 233, 0, 0, 38, 640,'fit','absolute');
+			}
 		}
 		button.slick-next{
 			background: rgba(0,0,0,0) url(../img/next.png) center/ cover;
@@ -420,29 +479,58 @@
 			@include Item(22, 132, 253, 235, 0 , 'auto', 1336, 'fit', 'absolute');
 			transform: scale(1.1) translateX(300%);
 			opacity: 0.1;
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				background-image: url(../img/next@640.png);
+				@include Item(12, 39, 233, 42, 0, 'auto', 640,'fit','absolute');
+			}
 		}
 	}
 	.colors{
 		opacity: 0.1;
 		@include Item(371, 36, 605, 0, 0 , 423, 1336, 'fit', 'absolute');
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(640, 50, 638, 0, 0, 0, 640,'fit','absolute');
+		}
 		.slick-list{
 			@include SubItem();
 		}
 		.slick-track{
 			height: 100%;
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				width: 100%!important;
+				text-align: center;
+				a{
+					display: inline-block;
+					position: relative;
+					float: none;
+					&+a{
+						margin-left: 0.2em;
+					}
+				}
+			}
 		}
 		aside{
 			@include SubItem();
 		}
 		a{
 			@include Item(90, 13, 'auto', 'auto', 'auto' , 'auto', 371, 'fit', 'relative');
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(20, 30, 'auto', 'auto', 'auto' , 'auto', 640,'fit','relative');
+				width: per(45, 640) !important;
+			}
 			img{
 				transition-duration: 0.25s;
 				transform: scale(0.5);
 				opacity: 0.75;
 				@include SubImgW();
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					transform: none;
+				}
 			}
 			&.slick-current{
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					width: per(70, 640) !important;
+				}
 				img{
 					opacity: 1;
 					transform: none;
@@ -473,6 +561,11 @@
 				fadeIn 0.9s 1 linear forwards 0s
 			);
 		}
+	}
+}
+.ios-container{
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		padding-bottom: per(140, 640);
 	}
 }
 
