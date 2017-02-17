@@ -206,7 +206,7 @@ $(function(){
 			slidesToShow: 10,
 			slidesToScroll: 10,
 			arrows: false,
-			draggable: false,
+			draggable: false
 			// centerMode: centerMode
 		};
 		console.log('initThumbs();');
