@@ -41,10 +41,13 @@ $(function(){
 		// 	return;
 		// }
 		range[id].top = function(){
-			return $('#' + id).offset().top - $('#' + id).outerHeight() *0.6;
+			return $('#' + id).offset().top;// - $('#' + id).outerHeight() *1;
 		};
 		range[id].butt = function(){
-			return $('#' + id).offset().top + $('#' + id).outerHeight() *1.6;
+			return $('#' + id).offset().top + $('#' + id).outerHeight();// *2;
+		};
+		range[id].middle = function(){
+			return $('#' + id).offset().top + $('#' + id).outerHeight() / 2;// *2;
 		};
 	});
 
@@ -61,26 +64,31 @@ $(function(){
 
 
 	$(window).on('scroll resize', function(){
-		var currentTop = $(window).scrollTop();
-		var currentButt = $(window).scrollTop() + $(window).height();
+		var currentTop = $(window).scrollTop() + $(window).height() / 3;
+		var currentButt = $(window).scrollTop() + $(window).height() / 3 * 2;
 		$('.section').each(function(i, section){
 			var sectionId = $(this).attr('id');
 			var rg = range[sectionId];		
 			// console.log(rg.top);
 			// console.log(rg.butt);	
-			if(scrollTop < currentTop){
-				if(rg.top() < currentButt && rg.butt() > currentButt){
+			// if(scrollTop < currentTop){
+			// 	if(rg.() <= currentButt && rg.top() <= ){
+			// 		if(activeSection != sectionId){
+			// 			activeSection = sectionId;
+			// 		}
+			// 	} 
+			// }else{
+			// 	if(rg.top() >= currentTop ){
+			// 		if(activeSection != sectionId){
+			// 			activeSection = sectionId;
+			// 		}
+			// 	} 
+			// }
+				if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
 					if(activeSection != sectionId){
 						activeSection = sectionId;
 					}
 				} 
-			}else{
-				if(rg.top() < currentTop && rg.butt() > currentTop){
-					if(activeSection != sectionId){
-						activeSection = sectionId;
-					}
-				} 
-			}
 			scrollTop = currentTop;
 		});
 		if(activeSection && !$('#' + activeSection).hasClass('on')){
