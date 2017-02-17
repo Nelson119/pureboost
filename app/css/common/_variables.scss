@@ -39,6 +39,7 @@
 		@media screen and (min-width: #{$screen-xs}) {
 			font-size: #{$i}px;
 			font-size: percentage($i/$font-size-base-num);
+			font-size: vwlg($i, 1336);
 		}
 	}
 	.fontsize-sm-#{$i} {
