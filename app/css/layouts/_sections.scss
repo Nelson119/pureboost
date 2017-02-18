@@ -35,9 +35,13 @@
 		}
 	}
 	.scroll{
-		@include Item(23, 56, 'auto', 0, 24 , 682, 1336, 'fit', 'fixed');
+		@include Item(17, 41, 'auto', 0, 24 , 682, 1336, 'fit', 'fixed');
 		background-size: cover;
+		background-repeat: no-repeat;
 		opacity: 0;
+		@include animation(
+			slideInDown 1.2s infinite 0s
+		);
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(62, 34, 'auto', 0, 15 , 293, 640,'fit','absolute');
 		}
@@ -71,6 +75,25 @@
 	}
 }
 
+.section{
+	.overlay{
+		@include SubItem();
+		background-size: cover;
+		background-position: center;
+		opacity: 0.8;
+		top: 0;
+		z-index: 2;
+	}
+
+	&.on{
+		.overlay{
+			top: 60%;
+			opacity: 0;
+			transition: 2s ease-out 0s;
+		}
+	}
+}
+
 #section1{
 	@include Item(1336, 670, 0, 0, 0 , 0, 1336, 'fit', 'relative');
 	@media screen and (max-width: #{$screen-xs - 1}) {
@@ -93,6 +116,7 @@
 		@include Item(538, 30, 190, 0, 0 , 71, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
 		text-indent: -9999em;
+		background-repeat: no-repeat;
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(353, 205, 137, 0, 0, 107, 640,'fit','absolute');
 		}
@@ -171,6 +195,7 @@
 	.title{
 		@include Item(420, 30, 151, 76, 0 , 'auto', 1336, 'fit', 'absolute');
 		background-size: 100% auto;
+		background-repeat: no-repeat;
 		white-space: nowrap;
 		font-weight: 100;
 		letter-spacing: 0.25em;
@@ -237,6 +262,7 @@
 		@include Item(1336, 671, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
 		background-position: center;
+		background-repeat: no-repeat;
 		opacity: 0.1;
 		top: -5%;
 		@media screen and (max-width: #{$screen-xs - 1}) {
@@ -310,6 +336,7 @@
 		@include Item(1336, 684, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
 		background-size: 100% auto;
 		background-position: center;
+		background-repeat: no-repeat;
 		opacity: 0.1;
 		top: 5%;
 		@media screen and (max-width: #{$screen-xs - 1}) {
@@ -389,8 +416,10 @@
 	.pureboost{
 		background-size: 100% auto;
 		background-position: center;
+		background-repeat: no-repeat;
 		opacity: 0.1;
 		@include Item(310, 40, 30, 0, 0 , 92, 1336, 'fit', 'absolute');
+
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(254, 33, 62, 0, 0, 191, 640,'fit','absolute');
 		}
@@ -411,8 +440,14 @@
 			@include Item(822, 456, 94, 0, 0 , 186, 1336, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(640, 391, 152, 0, 0, 0, 640,'fit','absolute');
+
 			}
 			figure{
+				width: vwlg(822,1336)!important;
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					width: 100vw!important;
+
+				}
 				background: center/cover;
 			}
 		}
@@ -610,5 +645,24 @@
 
 	to {
 		opacity: 1;
+	}
+}
+@include keyframes ( slideInDown ){
+	0% {
+		transform: translate3d(0, -35%, 0);
+		visibility: visible;
+	}
+
+	40% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	60% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	100%{
+		transform: translate3d(0, -35%, 0);
+		visibility: visible;
 	}
 }

@@ -84,15 +84,15 @@ $(function(){
 			// 		}
 			// 	} 
 			// }
-				if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
-					if(activeSection != sectionId){
-						activeSection = sectionId;
-					}
-				} 
+			if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
+				if(activeSection != sectionId){
+					activeSection = sectionId;
+				}
+			} 
 			scrollTop = currentTop;
 		});
 		if(activeSection && !$('#' + activeSection).hasClass('on')){
-			$('#' + activeSection).addClass('on').siblings().removeClass('on');
+			$('#' + activeSection).addClass('on').siblings().removeClass('on').trigger('page:on');
 		}
 	});
 
