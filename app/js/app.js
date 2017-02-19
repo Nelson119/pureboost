@@ -68,22 +68,7 @@ $(function(){
 		var currentButt = $(window).scrollTop() + $(window).height() / 3 * 2;
 		$('.section').each(function(i, section){
 			var sectionId = $(this).attr('id');
-			var rg = range[sectionId];		
-			// console.log(rg.top);
-			// console.log(rg.butt);	
-			// if(scrollTop < currentTop){
-			// 	if(rg.() <= currentButt && rg.top() <= ){
-			// 		if(activeSection != sectionId){
-			// 			activeSection = sectionId;
-			// 		}
-			// 	} 
-			// }else{
-			// 	if(rg.top() >= currentTop ){
-			// 		if(activeSection != sectionId){
-			// 			activeSection = sectionId;
-			// 		}
-			// 	} 
-			// }
+			var rg = range[sectionId];
 			if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
 				if(activeSection != sectionId){
 					activeSection = sectionId;
@@ -92,7 +77,7 @@ $(function(){
 			scrollTop = currentTop;
 		});
 		if(activeSection && !$('#' + activeSection).hasClass('on')){
-			$('#' + activeSection).addClass('on').siblings().removeClass('on').trigger('page:on');
+			$('#' + activeSection).addClass('on').siblings().removeClass('on').trigger('section:on');
 		}
 	});
 

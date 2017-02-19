@@ -36,16 +36,16 @@
     
     <header>
       <h1 class="logo">
-        <a href="http://www.adidas.com.tw" target="_blank"><img src="img/logo.png"></a>
+        <a href="http://www.adidas.com.tw" data-ga="PC_adidas_LOGO" data-mobile-ga="mobile_adidas_LOGO" target="_blank"><img src="img/logo.png"></a>
       </h1>
-      <a href="https://www.facebook.com/adidasRunningTW" target="_blank" class="facebook">
+      <a href="https://www.facebook.com/adidasRunningTW" target="_blank" class="facebook" data-ga="PC_FB" data-mobile-ga="mobile_FB">
         <img src="img/fb.png">
       </a>
     </header>
 
     <section class="ios-container">
       <!-- KV -->
-      <section  id="kv" class="section">
+      <section id="kv" class="section" data-section-mobile-ga="mobile_1" data-section-ga="PC_1">
         <figure class="kv hidden-xs" data-src="img/kv.png">
         </figure>
         <figure class="kv visible-xs" data-src="img/kv@640.png">
@@ -61,7 +61,7 @@
       <!-- ./KV -->
 
       <!-- A -->
-      <section  id="section1" class="section">
+      <section id="section1" class="section" data-section-mobile-ga="mobile_2" data-section-ga="PC_2">
         <figure class="section-1 hidden-xs" data-src="img/section-1.png">
         </figure>
         <figure class="section-1 visible-xs" data-src="img/section-1@640.png">
@@ -79,7 +79,7 @@
       <!-- ./A -->
 
       <!-- B -->
-      <section  id="section2" class="section">
+      <section id="section2" class="section" data-section-mobile-ga="mobile_3" data-section-ga="PC_3">
         <figure class="section-2 hidden-xs" data-src="img/section-2.png">
         </figure>
         <figure class="section-2 visible-xs" data-src="img/section-2@640.png">
@@ -101,7 +101,7 @@
       <!-- ./B -->
 
       <!-- C -->   
-      <section  id="section3" class="section"> 
+      <section id="section3" class="section" data-section-mobile-ga="mobile_4" data-section-ga="PC_4"> 
         <figure class="section-3 hidden-xs" data-src="img/section-3.png">
         </figure>
         <figure class="section-3 visible-xs" data-src="img/section-3@640.png">
@@ -119,7 +119,7 @@
       <!-- ./C -->
 
       <!-- D -->
-      <section  id="section4" class="section"> 
+      <section id="section4" class="section" data-section-mobile-ga="mobile_5" data-section-ga="PC_5"> 
         <figure class="section-4 hidden-xs" data-src="img/section-4.png">
         </figure>
         <figure class="section-4 visible-xs" data-src="img/section-4@640.png">
@@ -141,7 +141,7 @@
       <!-- ./D -->
 
       <!-- E -->
-      <section  id="section5" class="section"> 
+      <section id="section5" class="section" data-section-mobile-ga="mobile_6" data-section-ga="PC_6"> 
         <figure class="pureboost" data-src="img/pureboost.png">
         </figure>
         <section class="carousel" >
@@ -316,11 +316,11 @@
         </section>
         <nav class="colors">
           <aside class="text-center vertical-middle">
-            <a href="javascript:"><img data-src="img/colors/gray.png"></a>
-            <a href="javascript:"><img data-src="img/colors/red.png"></a>
-            <a href="javascript:"><img data-src="img/colors/black.png"></a>
-            <a href="javascript:"><img data-src="img/colors/white.png"></a>
-            <a href="javascript:"><img data-src="img/colors/light-gray.png"></a>
+            <a href="javascript:" data-ga="PC_gray" data-mobile-ga="mobile_gray"><img data-src="img/colors/gray.png"></a>
+            <a href="javascript:" data-ga="PC_red" data-mobile-ga="mobile_red"><img data-src="img/colors/red.png"></a>
+            <a href="javascript:" data-ga="PC_black" data-mobile-ga="mobile_black"><img data-src="img/colors/black.png"></a>
+            <a href="javascript:" data-ga="PC_white" data-mobile-ga="mobile_white"><img data-src="img/colors/white.png"></a>
+            <a href="javascript:" data-ga="PC_Light grey" data-mobile-ga="mobile_Light grey"><img data-src="img/colors/light-gray.png"></a>
           </aside>
         </nav>
       </section>
@@ -334,12 +334,12 @@
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      // e.src='https://www.google-analytics.com/analytics.js';
-      // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      // ga('create','UA-87377648-2');ga('send','pageview');
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-87377648-2');ga('send','pageview');
     </script>
 
     <!-- build:js js/vendor.js -->
