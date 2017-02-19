@@ -72,13 +72,13 @@ $(function(){
 			if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
 				if(activeSection != sectionId){
 					activeSection = sectionId;
+					if(activeSection && !$('#' + activeSection).hasClass('on')){
+						$('#' + activeSection).addClass('on').siblings().removeClass('on').trigger('section:on');
+					}
 				}
 			} 
 			scrollTop = currentTop;
 		});
-		if(activeSection && !$('#' + activeSection).hasClass('on')){
-			$('#' + activeSection).addClass('on').siblings().removeClass('on').trigger('section:on');
-		}
 	});
 
 	$(window).on('resize', function(){
