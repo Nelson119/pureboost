@@ -1,14 +1,14 @@
 #kv{
 	overflow:hidden;
-	@include Item(1336, 614, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	@include Item(1600, 795, 0, 0, 0 , 0, 1600, 'fit', 'relative');
 	padding-top: 100vh;
 	.kv{
-		@include Item(1336, 614, 0, 0, 0 , 0, 1336, 'fit', 'absolute');
+		@include Item(1600, 795, 0, 0, 0 , 0, 1600, 'fit', 'absolute');
 		background-size: cover;
 		transform: scale(1.4);
-		background-position: right center;
+		background-position: right bottom;
 		opacity: 0.1;
-		margin-top: 71px;
+		// margin-top: 71px;
 		padding-top: 100vh;
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(640, 836, 83, 0, 0, 0, 640,'fit','absolute');
@@ -16,26 +16,24 @@
 		}
 	}
 	.kv-text-1{
-		@include Item(672, 86, 170, 0, 0 , 70, 1336, 'fit', 'absolute');
-		@include Item(672, 86, 0, 0, 0 , 70, 1336, 'fit', 'absolute');
-		top: per(170, 795);
+		@include Item(784, 102, 210, 0, 0 , 112, 1600, 'fit', 'absolute');
+		// top: per(170, 795);
 
 		background-size: 100% auto;
 		text-indent: -9999em;
 		opacity: 0.1;
+		background-repeat: no-repeat;
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			// @include Item(362, 46, 123, 0, 0, 129, 640,'fit','absolute');
 			@include Item(362, 46, 200, 0, 0, 129, 640,'fit','absolute');
 		}
 	}
 	.kv-text-2{
-		@include Item(566, 58, 288, 0, 0 , 70, 1336, 'fit', 'absolute');
-		@include Item(566, 58, 0, 0, 0 , 70, 1336, 'fit', 'absolute');
-		top: per(288, 795);
+		@include Item(663, 70, 352, 0, 0 , 112, 1600, 'fit', 'absolute');
 		background-size: 100% auto;
 		text-indent: -9999em;
 		opacity: 0.1;
-		// top: 20%;
+		background-repeat: no-repeat;
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			// @include Item(362, 38, 195, 0, 0, 129, 640,'fit','absolute');
 			@include Item(362, 38, 270, 0, 0, 129, 640,'fit','absolute');
@@ -126,7 +124,7 @@
 		text-indent: -9999em;
 		background-repeat: no-repeat;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(353, 205, 137, 0, 0, 107, 640,'fit','absolute');
+			@include Item(402, 209, 50, 0, 0, 107, 640,'fit','absolute');
 		}
 	}
 	.shadow{
@@ -210,7 +208,7 @@
 		opacity: 0.1;
 		z-index: 3;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(339, 204, 60, 0, 0, 107, 640,'fit','absolute');
+			@include Item(387, 210, 60, 0, 0, 107, 640,'fit','absolute');
 		}
 		span{
 			@include SubItem();
@@ -288,7 +286,7 @@
 		text-indent: -9999em;
 		opacity: 0.1;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(245, 203, 136, 0, 0, 107, 640,'fit','absolute');
+			@include Item(286, 207, 136, 0, 0, 107, 640,'fit','absolute');
 		}
 	}
 	.text{
@@ -366,7 +364,7 @@
 		opacity: 0.1;
 		z-index: 3;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(284, 204, 136, 0, 0, 107, 640,'fit','absolute');
+			@include Item(332, 205, 136, 0, 0, 107, 640,'fit','absolute');
 		}
 		span{
 			@include SubItem();
@@ -417,8 +415,8 @@
 }
 
 #section5{
-	@include Item(1336, 650, 0, 0, 0 , 0, 1336, 'fit', 'relative');
-	padding-top: calc(100vh - 71px);
+	@include Item(1336, 670, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	// padding-top: calc(100vh - 71px);
 	@media screen and (max-width: #{$screen-xs - 1}) {
 		@include Item(640, 700, 0, 0, 0, 0, 640,'fit','relative');
 	}
@@ -426,10 +424,11 @@
 		background-size: 100% auto;
 		background-position: center;
 		background-repeat: no-repeat;
-		opacity: 0.1;
+		opacity: 0;
 		@include Item(310, 40, 30, 0, 0 , 92, 1336, 'fit', 'absolute');
 
 		@media screen and (max-width: #{$screen-xs - 1}) {
+			opacity: 0.1;
 			@include Item(254, 33, 62, 0, 0, 191, 640,'fit','absolute');
 		}
 	}
@@ -587,10 +586,10 @@
 	}
 	&.on{
 		.pureboost{
-			@include animation(
-				fadeIn 0.9s 1 linear forwards 0.15s
-			);
 			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include animation(
+					fadeIn 0.9s 1 linear forwards 0.15s
+				);
 			}
 		}
 		button.slick-prev, button.slick-next{
