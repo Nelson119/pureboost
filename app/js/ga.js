@@ -27,7 +27,7 @@ app.partial.ga = function(){
 	$('[data-mobile-ga]').on('click', function(){
 		var w = $(window).width();
 		if(w <= 768){
-			ga('send', 'event', 'Button', 'click', $(this).attr('data-mobile--ga'));
+			ga('send', 'event', 'Button', 'click', $(this).attr('data-mobile-ga'));
 		}
 	});
 };
