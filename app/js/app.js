@@ -75,7 +75,8 @@ $(function(){
 				}
 			} 
 			if(activeSection && !$('#' + activeSection).hasClass('on')){
-				$('#' + activeSection).addClass('on').trigger('section:on').siblings().removeClass('on');
+				$('#' + activeSection).addClass('on').trigger('section:on')
+					.siblings().removeClass('on');
 			}
 			scrollTop = currentTop;
 		});
