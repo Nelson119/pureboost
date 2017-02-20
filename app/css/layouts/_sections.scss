@@ -17,21 +17,28 @@
 	}
 	.kv-text-1{
 		@include Item(672, 86, 170, 0, 0 , 70, 1336, 'fit', 'absolute');
+		@include Item(672, 86, 0, 0, 0 , 70, 1336, 'fit', 'absolute');
+		top: per(170, 795);
+
 		background-size: 100% auto;
 		text-indent: -9999em;
 		opacity: 0.1;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(362, 46, 123, 0, 0, 129, 640,'fit','absolute');
+			// @include Item(362, 46, 123, 0, 0, 129, 640,'fit','absolute');
+			@include Item(362, 46, 200, 0, 0, 129, 640,'fit','absolute');
 		}
 	}
 	.kv-text-2{
 		@include Item(566, 58, 288, 0, 0 , 70, 1336, 'fit', 'absolute');
+		@include Item(566, 58, 0, 0, 0 , 70, 1336, 'fit', 'absolute');
+		top: per(288, 795);
 		background-size: 100% auto;
 		text-indent: -9999em;
 		opacity: 0.1;
 		// top: 20%;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(362, 38, 195, 0, 0, 129, 640,'fit','absolute');
+			// @include Item(362, 38, 195, 0, 0, 129, 640,'fit','absolute');
+			@include Item(362, 38, 270, 0, 0, 129, 640,'fit','absolute');
 		}
 	}
 	.scroll{
@@ -43,7 +50,7 @@
 			slideInDown 1.2s infinite 0s
 		);
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(62, 34, 'auto', 0, 15 , 293, 640,'fit','absolute');
+			@include Item(62, 34, 'auto', 0, 100 , 293, 640,'fit','absolute');
 		}
 	}
 	&.on{
@@ -76,6 +83,7 @@
 }
 
 .section{
+	overflow: hidden;
 	.overlay{
 		@include SubItem();
 		background-size: cover;
@@ -409,7 +417,8 @@
 }
 
 #section5{
-	@include Item(1336, 750, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	@include Item(1336, 650, 0, 0, 0 , 0, 1336, 'fit', 'relative');
+	padding-top: calc(100vh - 71px);
 	@media screen and (max-width: #{$screen-xs - 1}) {
 		@include Item(640, 700, 0, 0, 0, 0, 640,'fit','relative');
 	}
