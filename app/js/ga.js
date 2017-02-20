@@ -7,7 +7,6 @@
 /*global app, $, ga */
 app.partial.ga = function(){
 	$('.section').on('section:on', function(){
-						console.log('section on')
 		var w = $(window).width();
 		var section = $(this).attr('data-section-ga');
 		if(w <= 768){
