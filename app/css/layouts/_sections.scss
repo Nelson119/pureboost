@@ -48,7 +48,7 @@
 			slideInDown 1.2s infinite 0s
 		);
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(62, 34, 'auto', 0, 200 , 293, 640,'fit','absolute');
+			@include Item(62, 34, 'auto', 0, 210 , 293, 640,'fit','absolute');
 		}
 	}
 	&.on{
