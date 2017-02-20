@@ -7,6 +7,7 @@
 /*global app, $, ga */
 app.partial.ga = function(){
 	$('.section').on('section:on', function(){
+						console.log('section on')
 		var w = $(window).width();
 		var section = $(this).attr('data-section-ga');
 		if(w <= 768){
@@ -15,17 +16,19 @@ app.partial.ga = function(){
 		if(typeof ga !== 'undefined'){
 			ga('send', 'pageview', { 'page': section, 'title': section});
 		}
+	});
 
-		$('[data-ga]').on('click', function(){
-			if(w > 768){
-				ga('send', 'event', 'Button', 'click', $(this).attr('data-ga'));
-			}
-		});
+	$('[data-ga]').on('click', function(){
+		var w = $(window).width();
+		if(w > 768){
+			ga('send', 'event', 'Button', 'click', $(this).attr('data-ga'));
+		}
+	});
 
-		$('[data-mobile-ga]').on('click', function(){
-			if(w <= 768){
-				ga('send', 'event', 'Button', 'click', $(this).attr('data-mobile--ga'));
-			}
-		});
+	$('[data-mobile-ga]').on('click', function(){
+		var w = $(window).width();
+		if(w <= 768){
+			ga('send', 'event', 'Button', 'click', $(this).attr('data-mobile--ga'));
+		}
 	});
 };

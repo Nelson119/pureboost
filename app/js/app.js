@@ -72,11 +72,11 @@ $(function(){
 			if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
 				if(activeSection != sectionId){
 					activeSection = sectionId;
-					if(activeSection && !$('#' + activeSection).hasClass('on')){
-						$('#' + activeSection).addClass('on').siblings().removeClass('on').trigger('section:on');
-					}
 				}
 			} 
+			if(activeSection && !$('#' + activeSection).hasClass('on')){
+				$('#' + activeSection).addClass('on').trigger('section:on').siblings().removeClass('on');
+			}
 			scrollTop = currentTop;
 		});
 	});
