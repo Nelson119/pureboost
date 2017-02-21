@@ -28,5 +28,6 @@ header {
 		@include Item(640, 83, 0, 0, 0, 0, 640,'fit','fixed');
 		background: #000;
 		z-index: 10;
+		border-bottom: 1px solid #f8f8f8;
 	}
 }

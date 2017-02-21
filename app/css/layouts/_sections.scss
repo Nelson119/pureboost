@@ -7,12 +7,15 @@
 		background-size: cover;
 		transform: scale(1.4);
 		background-position: right bottom;
+		background-repeat: no-repeat;
 		opacity: 0.1;
 		// margin-top: 71px;
 		padding-top: 100vh;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(640, 836, 83, 0, 0, 0, 640,'fit','absolute');
-			padding-top: 100vh;
+			@include Item(640, 920, 83, 0, 0, 0, 640,'fit','absolute');
+			padding-top: calc(100vh - #{ per(83,640) });
+			background-position: right bottom;
+			// background-size: 100% auto;
 		}
 	}
 	.kv-text-1{
@@ -48,7 +51,7 @@
 			slideInDown 1.2s infinite 0s
 		);
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(62, 34, 'auto', 0, 210 , 293, 640,'fit','absolute');
+			@include Item(62, 34, 'auto', 0, 180 , 293, 640,'fit','fixed');
 		}
 	}
 	&.on{
