@@ -189,7 +189,7 @@ $(function(){
 		var w = $(window).width();
 		var vertical = true;
 		var centerMode = false;
-		if(w <= 768){
+		if(w <= 800){
 			vertical = false;
 			centerMode = true;
 		}
