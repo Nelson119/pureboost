@@ -444,6 +444,9 @@
 		.slick-track{
 			height: 100%;
 			width: vwlg(822*8,1336)!important;
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				width: 800vw!important;
+			}
 		}
 		.slide{
 			@include SubItem();
