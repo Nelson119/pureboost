@@ -443,6 +443,7 @@
 		}
 		.slick-track{
 			height: 100%;
+			width: vwlg(822*8,1336)!important;
 		}
 		.slide{
 			@include SubItem();
@@ -471,7 +472,7 @@
 				}
 			}
 			.slick-track{
-				width: 100%;
+				width: 100%!important;
 				height: 100%!important;
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					width: 100%!important;
@@ -549,6 +550,7 @@
 		}
 		.slick-track{
 			height: 100%;
+			width: auto!important;
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				width: 100%!important;
 				text-align: center;

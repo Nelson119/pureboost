@@ -16,7 +16,7 @@ header {
 		}
 	}
 	.facebook{
-		@include Item(25, 25, 40, 12, 0, 'auto', 1336);
+		@include Item(25, 25, 37, 12, 0, 'auto', 1336);
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(52, 52, 15, 27, 0, 'auto', 640,'fit','absolute');
 		}
